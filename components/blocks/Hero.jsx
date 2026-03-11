@@ -71,9 +71,9 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl font-semibold max-w-lg md:max-w-2xl text-center mt-4 leading-tight md:leading-tight">
-          Build stunning{" "}
+          Book your next{" "}
           <span className="relative bg-linear-to-r from-purple-700 to-[#764de1] bg-clip-text text-transparent">
-            websites
+            stay
             <div className="z-10 absolute bottom-0 left-0 w-full scale-120">
               <img
                 src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gradient_arc.svg"
@@ -81,15 +81,16 @@ export default function Hero() {
               />
             </div>
           </span>{" "}
+          <br />
           <span className="relative bg-linear-to-r from-[#764de1] to-indigo-600 bg-clip-text text-transparent">
             with
           </span>{" "}
-          PrebuiltUI.
+          Us
         </h1>
 
-        <p className="max-w-xl text-center text-base my-7">
-          A secure pre-built ui component library for React & HTML with
-          TailwindCSS. Build stunning websites with PrebuiltUI.
+        <p className="max-w-xl text-center text-xl my-7">
+          Discover your perfect getaway with our seamless booking and
+          exceptional stays tailored just for you.
         </p>
 
         {/* Search Box */}
