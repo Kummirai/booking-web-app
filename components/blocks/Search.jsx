@@ -10,7 +10,7 @@ export default function Search() {
           Where
         </label>
         <input
-          className="bg-gray-100 rounded-sm py-1 px-5 text-md font-light"
+          className="bg-gray-100 rounded-sm py-1 px-5 text-md font-light text-gray-700"
           placeholder="Search for destinations"
         />
       </div>
@@ -19,7 +19,7 @@ export default function Search() {
           Check In
         </label>
         <input
-          className="bg-gray-100 text-gray-400  rounded-sm py-1 px-5 text-md text-center font-light"
+          className="bg-gray-100 text-gray-500  rounded-sm py-1 px-5 text-md text-center font-light"
           type="date"
         />
       </div>
@@ -28,7 +28,7 @@ export default function Search() {
           Check Out
         </label>
         <input
-          className="bg-gray-100 text-gray-400 rounded-sm py-1 px-5 text-md font-light"
+          className="bg-gray-100 text-gray-500 rounded-sm py-1 px-5 text-md font-light"
           type="date"
         />
       </div>
@@ -37,7 +37,7 @@ export default function Search() {
           Who
         </label>
         <input
-          className="bg-gray-100 rounded-sm px-5 py-1 text-md font-light"
+          className="bg-gray-100 rounded-sm px-5 text-gray-600 py-1 text-md font-light"
           placeholder="Number of guests"
           type={"number"}
         />
