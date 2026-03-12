@@ -13,7 +13,7 @@ export default function Hero() {
     <>
       <div className="rethink relative flex flex-col items-center justify-center text-sm px-4 md:px-16 lg:px-24 xl:px-40 text-gray-800">
         {/* Avatars + Stars */}
-        <div className="flex items-center mt-24 md:mt-36">
+        <div className="flex items-center mt-24 ">
           <div className="flex -space-x-3 pr-3">
             <img
               src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200"
@@ -70,7 +70,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl font-semibold max-w-lg md:max-w-2xl text-center mt-4 leading-tight md:leading-tight">
+        <h1 className="text-2xl md:text-5xl font-semibold max-w-lg md:max-w-2xl text-center mt-4 leading-tight md:leading-tight">
           Book your next{" "}
           <span className="relative bg-linear-to-r from-purple-700 to-[#764de1] bg-clip-text text-transparent">
             stay
@@ -88,12 +88,13 @@ export default function Hero() {
           Us
         </h1>
 
-        <p className="max-w-xl text-center text-xl my-7">
+        <p className="max-w-xl text-center text-gray-500 font-light text-lg my-7">
           Discover your perfect getaway with our seamless booking and
           exceptional stays tailored just for you.
         </p>
 
         {/* Search Box */}
+
         <Search />
       </div>
     </>

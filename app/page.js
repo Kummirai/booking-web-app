@@ -19,7 +19,6 @@ export async function SearchHotels() {
     // Get IP from headers
     const ip =
       headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "";
-    console.log(ip);
 
     // Get country from IP
     let country = "za"; // Default
@@ -32,7 +31,6 @@ export async function SearchHotels() {
 
         if (data.status === "success") {
           country = data.countryCode;
-          console.log(country);
         }
       } catch (error) {
         console.error("Failed to get location from IP:", error);

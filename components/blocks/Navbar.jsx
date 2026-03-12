@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
 
   const navlinks = [
     {
@@ -66,8 +65,8 @@ export default function Navbar() {
                 onClick={() => scrollTo(0, 0)}
                 className={
                   link.path === pathname
-                    ? "relative border-b-2 border-transparent before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-[#764de1] before:to-indigo-600 before:content-['']"
-                    : ""
+                    ? "text-[13px] relative border-b-2 border-transparent before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-linear-to-r before:from-[#764de1] before:to-indigo-600 before:content-['']"
+                    : "text-[13px] "
                 }
               >
                 {link.link}
@@ -78,7 +77,7 @@ export default function Navbar() {
 
         <div>
           <button className="max-sm:hidden cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-            Login
+            <Link href={"/login"}>Login</Link>
           </button>
           <svg
             onClick={() => setMenuOpen(true)}
@@ -121,7 +120,7 @@ export default function Navbar() {
             Contact{" "}
           </Link>
           <button className=" cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-            Login
+            <Link href={"/login"}>Login</Link>
           </button>
           <svg
             onClick={() => setMenuOpen(false)}
