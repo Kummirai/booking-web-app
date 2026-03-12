@@ -1,12 +1,40 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const navlinks = [
+    {
+      id: 1,
+      link: "Hotels",
+      path: "/",
+    },
+    {
+      id: 2,
+      link: "Flights",
+      path: "/flights",
+    },
+    {
+      id: 3,
+      link: "Car Rental",
+      path: "/cars",
+    },
+    {
+      id: 4,
+      link: "Attractions",
+      path: "/attractions",
+    },
+  ];
+
   return (
     <nav className="h-20">
       <div className="fixed left-0 top-0 right-0 z-100 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white transition-all">
-        <a href="https://prebuiltui.com">
+        <Link href="https://prebuiltui.com">
           <svg
             width="157"
             height="40"
@@ -26,26 +54,26 @@ export default function Navbar() {
               strokeLinejoin="round"
             ></path>
           </svg>
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden sm:flex items-center gap-4 md:gap-8 max-md:text-sm text-gray-800">
-          <a href="#" onClick={() => scrollTo(0, 0)}>
-            {" "}
-            Home{" "}
-          </a>
-          <a href="#" onClick={() => scrollTo(0, 0)}>
-            {" "}
-            Products{" "}
-          </a>
-          <a href="#" onClick={() => scrollTo(0, 0)}>
-            {" "}
-            About{" "}
-          </a>
-          <a href="#" onClick={() => scrollTo(0, 0)}>
-            {" "}
-            Contact{" "}
-          </a>
+          {navlinks.map((link) => {
+            return (
+              <Link
+                key={link.id}
+                href={link.path}
+                onClick={() => scrollTo(0, 0)}
+                className={
+                  link.path === pathname
+                    ? "relative border-b-2 border-transparent before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-[#764de1] before:to-indigo-600 before:content-['']"
+                    : ""
+                }
+              >
+                {link.link}
+              </Link>
+            );
+          })}
         </div>
 
         <div>
@@ -76,22 +104,22 @@ export default function Navbar() {
         className={`sm:hidden fixed inset-0 ${menuOpen ? "w-full" : "w-0"} overflow-hidden bg-white backdrop-blur shadow-xl rounded-lg z-200 text-sm transition-all`}
       >
         <div className="flex flex-col items-center justify-center h-full text-xl font-semibold gap-6 p-4">
-          <a href="#" onClick={() => scrollTo(0, 0)}>
+          <Link href="#" onClick={() => scrollTo(0, 0)}>
             {" "}
             Home{" "}
-          </a>
-          <a href="#" onClick={() => scrollTo(0, 0)}>
+          </Link>
+          <Link href="#" onClick={() => scrollTo(0, 0)}>
             {" "}
             Products{" "}
-          </a>
-          <a href="#" onClick={() => scrollTo(0, 0)}>
+          </Link>
+          <Link href="#" onClick={() => scrollTo(0, 0)}>
             {" "}
             About{" "}
-          </a>
-          <a href="#" onClick={() => scrollTo(0, 0)}>
+          </Link>
+          <Link href="#" onClick={() => scrollTo(0, 0)}>
             {" "}
             Contact{" "}
-          </a>
+          </Link>
           <button className=" cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
             Login
           </button>
