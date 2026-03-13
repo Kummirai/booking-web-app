@@ -65,7 +65,7 @@ export default function Card({ hotel }) {
           </div>
 
           <div className="absolute bottom-4">
-            <button className="flex items-center py-2 px-6 text-xs  text-white rounded-full relative bg-linear-to-r from-purple-700 to-[#764de1] hover:cursor-pointer">
+            <button className="flex items-center py-2 px-6 text-xs text-white rounded-full relative bg-linear-to-r from-purple-700 to-[#764de1] hover:cursor-pointer">
               <span className="mr-1">More details</span>
               <LuSquareArrowOutUpRight />
             </button>

@@ -1,49 +1,123 @@
-import React from "react";
-import { Input } from "../ui/input";
-import { FaSearch } from "react-icons/fa";
-
 export default function Search() {
   return (
-    <form className="shadow-2xl max-w-5xl rounded-lg py-5 px-8 bg-white flex flex-col sm:flex-row items-center gap-8 h-fit">
-      <div className="flex flex-col gap-1 items-center">
-        <label htmlFor="" className="font-semibold text-md">
-          Where
-        </label>
+    <form className="bg-white text-gray-500 border border-indigo-100 rounded-lg px-8 py-5 w-full flex justify-between flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto">
+      <div>
+        <div className="flex items-center  gap-2">
+          <svg
+            className="w-4 h-4 text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+            />
+          </svg>
+          <label htmlFor="destinationInput">Destination</label>
+        </div>
         <input
-          className="bg-gray-100 rounded-sm py-1 px-5 text-md font-light text-gray-700"
-          placeholder="Search for destinations"
+          list="destinations"
+          id="destinationInput"
+          type="text"
+          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none grow"
+          placeholder="Type here"
+          required
         />
       </div>
-      <div className="flex flex-col gap-1 items-center">
-        <label htmlFor="" className="font-semibold text-md">
-          Check In
-        </label>
+
+      <div>
+        <div className="flex items-center gap-2">
+          <svg
+            className="w-4 h-4 text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+            />
+          </svg>
+          <label htmlFor="checkIn">Check in</label>
+        </div>
         <input
-          className="bg-gray-100 text-gray-500  rounded-sm py-1 px-5 text-md text-center font-light"
+          id="checkIn"
           type="date"
+          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
         />
       </div>
-      <div className="flex flex-col gap-1 items-center">
-        <label htmlFor="" className="font-semibold  text-md">
-          Check Out
-        </label>
+
+      <div>
+        <div className="flex items-center gap-2">
+          <svg
+            className="w-4 h-4 text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+            />
+          </svg>
+          <label htmlFor="checkOut">Check out</label>
+        </div>
         <input
-          className="bg-gray-100 text-gray-500 rounded-sm py-1 px-5 text-md font-light"
+          id="checkOut"
           type="date"
+          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
         />
       </div>
-      <div className="flex flex-col gap-1 items-center w-1/2">
-        <label htmlFor="" className="font-semibold text-md">
-          Who
-        </label>
+
+      <div className="flex md:flex-col max-md:gap-2 max-md:items-center">
+        <label htmlFor="guests">Guests</label>
         <input
-          className="bg-gray-100 rounded-sm px-5 text-gray-600 py-1 text-md font-light"
-          placeholder="Number of guests"
-          type={"number"}
+          min={1}
+          max={4}
+          id="guests"
+          type="number"
+          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none  max-w-16"
+          placeholder="0"
         />
       </div>
-      <button className="flex flex-col items-center p-3 justify-center relative bg-linear-to-r from-purple-700 to-[#764de1]  rounded-full hover:cursor-pointer hover:bg-linear-to-r hover:from-purple-600 hover:to-[#8c65ee]">
-        <FaSearch className="text-2xl text-white" />
+
+      <button className="flex items-center justify-center gap-1 rounded-md bg-indigo-500 py-3 px-4 text-white my-auto cursor-pointer max-md:w-full max-md:py-1">
+        <svg
+          className="w-4 h-4 text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeWidth="2"
+            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+          />
+        </svg>
+        <span>Search</span>
       </button>
     </form>
   );
