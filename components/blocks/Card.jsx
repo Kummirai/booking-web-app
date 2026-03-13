@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
+import Link from "next/link";
 
 export default function Card({ hotel }) {
   const createRating = (rating) => {
@@ -62,8 +63,10 @@ export default function Card({ hotel }) {
 
           <div className="absolute bottom-4">
             <button className="flex items-center py-2 px-6 text-xs  text-white rounded-full relative bg-linear-to-r from-purple-700 to-[#764de1] hover:cursor-pointer">
-              <span className="mr-1">More details</span>
-              <LuSquareArrowOutUpRight />
+              <Link href={`/hotel-details/${hotel.property_token}`}>
+                <span className="mr-1">More details</span>
+                <LuSquareArrowOutUpRight />
+              </Link>
             </button>
           </div>
         </div>
