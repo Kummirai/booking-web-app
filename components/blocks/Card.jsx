@@ -3,6 +3,8 @@ import Image from "next/image";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 
 export default function Card({ hotel }) {
+  console.log(hotel?.images[0].original_image);
+
   const createRating = (rating) => {
     const remainder = rating % 1;
     const whole = Math.trunc(rating);
@@ -27,7 +29,9 @@ export default function Card({ hotel }) {
     <div className="h-110 flex flex-col shadow rounded-b-sm">
       <div className="relative max-w-200 h-50 object-cover ">
         <Image
-          src={hotel?.images[0]?.thumbnail}
+          src={
+            hotel?.images?.[0]?.original_image || hotel?.images?.[0]?.thumbnail
+          }
           alt={hotel?.property_token}
           fill
           className="rounded-t-sm"
