@@ -56,7 +56,7 @@ export default function Search() {
         <input
           id="checkIn"
           type="date"
-          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
+          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none grow"
         />
       </div>
 
@@ -84,7 +84,7 @@ export default function Search() {
         <input
           id="checkOut"
           type="date"
-          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
+          className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none grow"
         />
       </div>
 
