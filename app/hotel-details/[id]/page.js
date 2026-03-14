@@ -2,17 +2,18 @@ import Image from "next/image";
 import React from "react";
 import { getJson } from "serpapi";
 
-export default async function page({ params }) {
+export default async function page({ params, searchParams }) {
   const { id } = await params;
+  const { q } = await searchParams;
 
   const hotelDetails = await getJson(
     {
       engine: "google_hotels",
-      q: "Bali Resorts",
+      q: q,
       check_in_date: "2026-03-14",
       check_out_date: "2026-03-15",
-      adults: "2",
-      currency: "USD",
+      adults: "1",
+      currency: "ZAR",
       gl: "us",
       hl: "en",
       property_token: id,
