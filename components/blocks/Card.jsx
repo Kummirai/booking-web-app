@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
+import Link from "next/link";
 
 export default function Card({ hotel }) {
   console.log(hotel?.images[0].original_image);
@@ -65,10 +66,13 @@ export default function Card({ hotel }) {
           </div>
 
           <div className="absolute bottom-4">
-            <button className="flex items-center py-2 px-6 text-xs text-white rounded-full relative bg-linear-to-r from-purple-700 to-[#764de1] hover:cursor-pointer">
+            <Link
+              className="flex items-center py-2 px-6 text-xs  text-white rounded-full relative bg-linear-to-r from-purple-700 to-[#764de1] hover:cursor-pointer"
+              href={`/hotel-details/${hotel.property_token}?q=${hotel.name}`}
+            >
               <span className="mr-1">More details</span>
               <LuSquareArrowOutUpRight />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

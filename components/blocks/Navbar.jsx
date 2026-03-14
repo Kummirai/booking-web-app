@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <nav className="h-20">
-      <div className="fixed left-0 top-0 right-0 z-100 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white transition-all">
+      <div className="fixed left-0 top-0 right-0 z-100 flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4  bg-white transition-all">
         <Link href="https://prebuiltui.com">
           <svg
             width="157"
