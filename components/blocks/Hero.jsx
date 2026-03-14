@@ -65,13 +65,16 @@ export default function Hero() {
                   </svg>
                 ))}
             </div>
-            <p className="text-sm text-white"> Used by 10,000+ users </p>
+            <p className="text-sm text-white text-shadow-lg/20">
+              {" "}
+              Used by 10,000+ users{" "}
+            </p>
           </div>
         </div>
 
         {/* Headline */}
-        <h1 className="text-2xl md:text-5xl text-white font-semibold max-w-lg md:max-w-2xl text-center mt-4 leading-tight md:leading-tight">
-          Book your next{" "}
+        <h1 className="text-2xl md:text-5xl text-white font-semibold max-w-lg md:max-w-2xl text-center mt-4 leading-tight md:leading-tight ">
+          <span className="text-shadow-lg/20"> Book your next </span>
           <span className="relative bg-linear-to-r from-purple-700 to-[#764de1] bg-clip-text text-transparent">
             stay
             <div className="z-10 absolute bottom-0 left-0 w-full scale-120">
@@ -82,13 +85,13 @@ export default function Hero() {
             </div>
           </span>{" "}
           <br />
-          <span className="relative bg-linear-to-r from-[#764de1] to-indigo-600 bg-clip-text text-transparent">
+          <span className="relative bg-linear-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent ">
             with
           </span>{" "}
           Us
         </h1>
 
-        <p className="max-w-xl text-center text-white font-light text-lg my-7">
+        <p className="max-w-xl text-center text-white font-light text-lg my-7 text-shadow-lg/20">
           Discover your perfect getaway with our seamless booking and
           exceptional stays tailored just for you.
         </p>

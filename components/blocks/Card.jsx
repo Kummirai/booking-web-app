@@ -31,7 +31,9 @@ export default function Card({ hotel }) {
       <div className="relative max-w-200 h-50 object-cover ">
         <Image
           src={
-            hotel?.images?.[0]?.original_image || hotel?.images?.[0]?.thumbnail
+            hotel?.images?.[0]?.original_image ||
+            hotel?.images?.[0]?.thumbnail ||
+            "/img/hero-bg.webp"
           }
           alt={hotel?.property_token}
           fill
