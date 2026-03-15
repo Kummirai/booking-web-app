@@ -3,6 +3,7 @@ import Hero from "@/components/blocks/Hero";
 import { headers } from "next/headers";
 import { Suspense } from "react";
 import SpinnerCustom from "./loading-spinner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export async function SearchHotels() {
   //Create booking dates 7 days from today
@@ -85,6 +86,7 @@ export default async function page() {
       <Suspense fallback={<SpinnerCustom />}>
         <SearchHotels />
       </Suspense>
+      <SpeedInsights />
     </>
   );
 }
