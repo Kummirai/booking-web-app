@@ -6,12 +6,19 @@ export default async function page({ params, searchParams }) {
   const { id } = await params;
   const { q } = await searchParams;
 
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1;
+  const currentDay = currentDate.getDate() + 7;
+  const today = `${currentYear}-${currentMonth < 10 ? "0" + currentMonth : currentMonth}-${currentDay}`;
+  const tomorrow = `${currentYear}-${currentMonth < 10 ? "0" + currentMonth : currentMonth}-${currentDay + 1}`;
+
   const hotelDetails = await getJson(
     {
       engine: "google_hotels",
       q: q,
-      check_in_date: "2026-03-14",
-      check_out_date: "2026-03-15",
+      check_in_date: today,
+      check_out_date: tomorrow,
       adults: "1",
       currency: "ZAR",
       gl: "us",
